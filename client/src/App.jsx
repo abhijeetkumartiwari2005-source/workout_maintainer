@@ -21,7 +21,7 @@ function Navbar() {
 
 
 
-export { Navbar, Hero };
+export { Navbar, Hero,  Features };
 // 2. Hero Component
 function Hero() {
   return (
@@ -34,6 +34,46 @@ function Hero() {
         <a href="#" className="bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-8 rounded-full text-lg font-semibold transition duration-300">
           Get Started for Free
         </a>
+      </div>
+    </div>
+  );
+}
+// 3. Features Component
+function Features() {
+  return (
+    <div className="bg-gray-100 py-16">
+      <div className="container mx-auto px-6">
+        <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">Why You'll Love It</h3>
+        <div className="grid md:grid-cols-3 gap-8">
+          
+          {/* Feature 1 */}
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div className="text-indigo-500 text-4xl mb-4">🏋️</div>
+            <h4 className="text-xl font-semibold text-gray-900 mb-2">Log Any Workout</h4>
+            <p className="text-gray-600">
+              From weightlifting to cardio, log every set, rep, and minute with our easy-to-use interface.
+            </p>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div className="text-indigo-500 text-4xl mb-4">📈</div>
+            <h4 className="text-xl font-semibold text-gray-900 mb-2">Visualize Progress</h4>
+            <p className="text-gray-600">
+              Watch your strength and endurance grow with beautiful, simple charts and graphs.
+            </p>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div className="text-indigo-500 text-4xl mb-4">💪</div>
+            <h4 className="text-xl font-semibold text-gray-900 mb-2">Stay Motivated</h4>
+            <p className="text-gray-600">
+              Set personal records, earn achievements, and build a consistent routine.
+            </p>
+          </div>
+
+        </div>
       </div>
     </div>
   );
