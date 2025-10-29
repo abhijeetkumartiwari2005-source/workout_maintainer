@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* small app defaults */
-html, body, #root {
-  height: 100%;
-}
-body {
-  @apply bg-gray-100 font-sans;
+/* small app defaults - put base styles inside the `base` layer so
+   Tailwind's utilities are available for `@apply` during build. */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+
+  /* Avoid using `@apply` here to prevent build-time resolution issues.
+     Use equivalent CSS so the build doesn't depend on the generated
+     utility being present at this phase. */
+  body {
+    background-color: #f7fafc; /* Tailwind gray-100 */
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
 }
