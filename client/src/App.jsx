@@ -21,7 +21,7 @@ function Navbar() {
 
 
 
-export { Navbar, Hero,  Features };
+export { Navbar, Hero,  Features, Footer };
 // 2. Hero Component
 function Hero() {
   return (
@@ -76,5 +76,15 @@ function Features() {
         </div>
       </div>
     </div>
+  );}
+  // 4. Footer Component
+function Footer() {
+  return (
+    <footer className="bg-gray-800 text-gray-400 p-6">
+      <div className="container mx-auto text-center">
+        <p>&copy; 2025 WorkoutMaintainer. All rights reserved.</p>
+      </div>
+    </footer>
   );
 }
+
