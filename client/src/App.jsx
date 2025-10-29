@@ -17,7 +17,24 @@ function Navbar() {
     </nav>
   );
 }
-<nav className="bg-gray-800 text-white p-4 shadow-md bg-red-500"></nav>
 
 
-export { Navbar };
+
+
+export { Navbar, Hero };
+// 2. Hero Component
+function Hero() {
+  return (
+    <div className="bg-gray-900 text-white py-20 md:py-32">
+      <div className="container mx-auto text-center px-6">
+        <h2 className="text-4xl md:text-6xl font-bold mb-4">Track Your Progress. Crush Your Goals.</h2>
+        <p className="text-lg md:text-xl text-gray-300 mb-8">
+          The all-in-one solution to log your workouts, monitor your gains, and stay motivated.
+        </p>
+        <a href="#" className="bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-8 rounded-full text-lg font-semibold transition duration-300">
+          Get Started for Free
+        </a>
+      </div>
+    </div>
+  );
+}
